@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/min/style.min.css">
 	<script src="<?php echo base_url(); ?>assets/min/main.min.js"></script>
-	<title></title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<title>Rebate Info</title>
 </head>
 <body class="container-fluid">
 <header>

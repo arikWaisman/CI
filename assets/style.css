@@ -7334,5 +7334,9 @@ button.close {
     display: none !important;
   }
 }
+.form-wrapper form .g-recaptcha div {
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
 
 /*# sourceMappingURL=style.css.map */
