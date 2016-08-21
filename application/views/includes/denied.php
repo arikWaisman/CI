@@ -18,7 +18,7 @@
 					
 					echo '<td>';
 					echo form_open('status/update', '', ['status' => 0, 'user_id' => $object->id ] );
-					echo form_submit('edit', 'Edit', ['class' => 'btn btn-primary']);
+					echo form_submit('reconsider', 'Reconsider', ['class' => 'btn btn-primary']);
 					echo form_close();
 					echo '</td>';
 					continue;
