@@ -1,4 +1,4 @@
-<?php include "templates/header.php"; ?>
+<?php include "includes/header.php"; ?>
 
 <section>
 	<div class="col-xs-12 col-sm-6 col-sm-offset-3 alert alert-success text-center">
@@ -9,4 +9,4 @@
 	</div>
 </section>
 
-<?php include "templates/footer.php"; ?>
+<?php include "includes/footer.php"; ?>

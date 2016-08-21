@@ -18,7 +18,7 @@ $company_phone_value 	= set_value('company_phone');
 
 ?>
 
-<?php include "templates/header.php"; ?>
+<?php include "includes/header.php"; ?>
 
 <section class="row">
 
@@ -34,8 +34,6 @@ $company_phone_value 	= set_value('company_phone');
 		?>
 	</div>
 <?php endif; ?>
-
-
 	<?php echo form_open_multipart('form/submit', ['id' => 'user-form']); ?>
 		<div class="col-xs-12">
 			<h2 class="text-center">User Info</h2>
@@ -134,8 +132,8 @@ $company_phone_value 	= set_value('company_phone');
 		</div>
 	</div>
 
-<!-- 	<div class="g-recaptcha col-xs-12" data-sitekey="6LcmDSgTAAAAAKpcdQkUdWxQnGd35dnXvyaLhCa3"></div>
- -->	<div class="col-xs-12 text-center"> 
+	<div class="g-recaptcha col-xs-12" data-sitekey="6LcmDSgTAAAAAKpcdQkUdWxQnGd35dnXvyaLhCa3"></div>
+	<div class="col-xs-12 text-center"> 
 		<?php echo form_submit('submit', 'submit', ['class' =>'btn btn-primary']);?>
 	</div>
 
@@ -145,4 +143,4 @@ $company_phone_value 	= set_value('company_phone');
 
 </section>
 
-<?php include "templates/footer.php"; ?>
+<?php include "includes/footer.php"; ?>

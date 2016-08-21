@@ -7339,4 +7339,10 @@ button.close {
   margin-bottom: 15px;
 }
 
+.need-action-wrapper,
+.approved-wrapper,
+.denied-wrapper {
+  padding: 15px 0;
+}
+
 /*# sourceMappingURL=style.css.map */

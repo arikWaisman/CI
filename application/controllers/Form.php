@@ -6,6 +6,7 @@ class Form extends CI_Controller
 	public function __construct(){
 
 		parent::__construct();
+		$this->load->model('Form_Model');
 
 	}
 
@@ -28,7 +29,6 @@ class Form extends CI_Controller
         else {
 
 	    	$file_data = $this->upload_handler();
-			var_dump($file_data);
 	    	if($file_data == FALSE){
 
         		$_SESSION['file_type_error'] = 'uploaded file must be a PDF and can not be empty';
@@ -36,10 +36,7 @@ class Form extends CI_Controller
 
         	} else {
 
-        		$this->load->model('Form_Model');
-
 				$this->Form_Model->insert($file_data['full_path']);
-            
            		$this->load->view('submit');
         	}
 
