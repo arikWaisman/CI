@@ -2,4 +2,7 @@
 .approved-wrapper,
 .denied-wrapper{
 	padding: 15px 0;
+	.overflow{
+		overflow: auto;
+	}
 }

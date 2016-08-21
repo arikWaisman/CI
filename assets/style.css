@@ -7344,5 +7344,10 @@ button.close {
 .denied-wrapper {
   padding: 15px 0;
 }
+.need-action-wrapper .overflow,
+.approved-wrapper .overflow,
+.denied-wrapper .overflow {
+  overflow: auto;
+}
 
 /*# sourceMappingURL=style.css.map */
