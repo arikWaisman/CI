@@ -16,7 +16,7 @@
 			</div>
 			<div class="form-group">
 				<?php echo form_label('Password:', 'password'); ?>
-				<?php echo form_input('password', '',  ['placeholder' => 'password', 'class' => 'form-control']);?>
+				<?php echo form_password('password', '',  ['placeholder' => 'password', 'class' => 'form-control']);?>
 			</div>
 		</div>
 	</div>

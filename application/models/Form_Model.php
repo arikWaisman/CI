@@ -29,8 +29,8 @@ class Form_Model extends CI_Model
 
 	public function insert($file_name){
 		
-		$this->status 			= '0';
-		$this->first_name 		= $this->input->post('first_name');
+		$this->status			= 0;
+		$this->first_name		= $this->input->post('first_name');
 		$this->last_name		= $this->input->post('last_name');
 		$this->address_1		= $this->input->post('address_1');
 		$this->address_2		= $this->input->post('address_2') ? $this->input->post('address_2') : 'N/A' ;
@@ -64,15 +64,10 @@ class Form_Model extends CI_Model
 	public function status_update(){
 
 		$update_value = [ 'status' => $this->input->post('status') ];
-		
-		$this->db->where( 'id', $this->input->post('user_id') );
-		$this->db->update('forms', $update_value);
-	
-	}
 
-	public function denied(){
-		
-		
+		$this->db->where( 'id', $this->input->post('user_id') );
+
+		$this->db->update('forms', $update_value);
 	
 	}
 
