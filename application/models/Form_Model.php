@@ -67,7 +67,7 @@ class Form_Model extends CI_Model
 
 		$this->db->where( 'id', $this->input->post('user_id') );
 
-		$this->db->update('forms', $update_value);
+		$this->db->update( 'forms', $update_value );
 	
 	}
 
