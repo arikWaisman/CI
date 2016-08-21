@@ -11,58 +11,57 @@ class Form extends CI_Controller
 	}
 
 	public function index(){
-           	
-      	$_SESSION['file_type_error'] =  null;
-      	$this->load->view('form');
-    
+			
+		$_SESSION['file_type_error'] =  null;
+		$this->load->view('form');
+	
 	}
 
 	public function submit(){
 
-	    if ($this->form_validation->run() == FALSE ){
+		if ($this->form_validation->run() == FALSE ){
 
-            $this->load->view('form');
-         //    $errors = validation_errors();
-        	// echo json_encode($errors);
+			$this->load->view('form');
 
-        }
-        else {
+		}
+		else {
 
-	    	$file_data = $this->upload_handler();
-	    	if($file_data == FALSE){
+			$file_data = $this->upload_handler();
+			if($file_data == FALSE){
 
-        		$_SESSION['file_type_error'] = 'uploaded file must be a PDF and can not be empty';
-    			$this->load->view('form');
+				$_SESSION['file_type_error'] = 'uploaded file must be a PDF and can not be empty';
+				$this->load->view('form');
 
-        	} else {
+			} else {
 
 				$this->Form_Model->insert($file_data['orig_name']);
-           		$this->load->view('submit');
+				$this->load->view('submit');
 
-        	}
+			}
 
-        }
+		}
 
 	}
 
 	public function upload_handler(){
 
 		$config['upload_path']   = './uploads/'; 
-	    $config['allowed_types'] = 'pdf'; 
+		$config['allowed_types'] = 'pdf'; 
 
-	    if( $_FILES['pdf']['type'] != 'application/pdf' || $_FILES['pdf']['error'] == 4 ){
-    	
-    		return False;
+		if( $_FILES['pdf']['type'] != 'application/pdf' || $_FILES['pdf']['error'] == 4 ){
+		
+			return FALSE;
 
-	    } else {
-	    
-	    $this->load->library('upload', $config);
-	   	//file upload
+		} else {
+		
+		$this->load->library('upload', $config);
+		//file upload
+		$_FILES['pdf']['name'] = time() . '-' . $_FILES['pdf']['name'];
 		$this->upload->do_upload('pdf');
 
-	    $file_data = $this->upload->data();
+		$file_data = $this->upload->data();
 
-	    return $file_data;
+		return $file_data;
 		}
 	}
 

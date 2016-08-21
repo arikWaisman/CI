@@ -64,9 +64,7 @@ class Form_Model extends CI_Model
 	public function status_update(){
 
 		$update_value = [ 'status' => $this->input->post('status') ];
-
 		$this->db->where( 'id', $this->input->post('user_id') );
-
 		$this->db->update( 'forms', $update_value );
 	
 	}

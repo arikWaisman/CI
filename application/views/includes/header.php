@@ -28,16 +28,16 @@
      	<?php if( !$this->session->userdata('username') ) : ?>
         	<li><a href="<?php echo base_url('login') ?>">Admin Login</a></li>
     	<?php  else: ?>
-    	<li><a href="<?php echo base_url('dashboard') ?>">Hello, <?php echo $this->session->userdata('username') ?></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="<?php echo base_url('form') ?>">Form</a></li>
-            <li><a href="<?php echo base_url('dashboard') ?>">Dashboard</a></li>
-            <li><a href="<?php echo base_url('dashboard/logout') ?>">Logout</a></li>
-          </ul>
-        </li>
-    <?php endif; ?>
+	    	<li><a href="<?php echo base_url('dashboard') ?>">Hello, <?php echo $this->session->userdata('username') ?></a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="<?php echo base_url('form') ?>">Form</a></li>
+	            <li><a href="<?php echo base_url('dashboard') ?>">Dashboard</a></li>
+	            <li><a href="<?php echo base_url('dashboard/logout') ?>">Logout</a></li>
+	          </ul>
+	        </li>
+    	<?php endif; ?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
