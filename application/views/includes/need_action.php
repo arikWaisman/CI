@@ -16,7 +16,6 @@
 				if($key == 'status'){
 					
 					echo '<td>';
-
 					echo form_open('status/update', '', ['status' => 1, 'user_id' => $object->id ] );
 					echo form_submit('approve', 'Approve', ['class' => 'btn btn-success']);
 					echo form_close();
@@ -24,14 +23,15 @@
 					echo form_open('status/update', '', ['status' => 2, 'user_id' => $object->id ] );
 					echo form_submit('deny', 'Deny', ['class' => 'btn btn-danger']);
 					echo form_close();
-
 					echo '</td>';
 					continue;
 				}
 
 				if($key == 'pdf_path'){
+
 					echo sprintf('<td><a href="%s" target="_blank">File</a></td>', $value);
 					continue;
+
 				}
 
 					echo sprintf('<td>%s</td>', $value);

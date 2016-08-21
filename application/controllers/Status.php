@@ -12,7 +12,7 @@ class Status extends CI_Controller
 	}
 
 	public function update(){
-		// var_dump($this->input->post('status'));
+
 		$this->Form_Model->status_update();
 		redirect('dashboard');
 	

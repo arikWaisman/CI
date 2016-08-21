@@ -21,9 +21,10 @@ class Dashboard extends CI_Controller
 
 	public function index(){
 		
-		$result['need_action'] = $this->Form_Model->get_status_where(0); 
-		$result['approved'] = $this->Form_Model->get_status_where(1); 
-		$result['denied'] = $this->Form_Model->get_status_where(2); 
+		$result['need_action']	= $this->Form_Model->get_status_where(0); 
+		$result['approved']		= $this->Form_Model->get_status_where(1); 
+		$result['denied']		= $this->Form_Model->get_status_where(2); 
+
 		$this->load->view('dashboard', $result);
 	
 	}
@@ -32,7 +33,6 @@ class Dashboard extends CI_Controller
 		
 		unset($_SESSION['user_id']);
 		unset($_SESSION['username']);
-
 		redirect('login');
 
 	}

@@ -22,6 +22,7 @@
 					echo form_close();
 					echo '</td>';
 					continue;
+					
 				}
 
 				if($key == 'pdf_path'){

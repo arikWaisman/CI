@@ -21,11 +21,14 @@
 					echo form_close();
 					echo '</td>';
 					continue;
+
 				}
 
 				if($key == 'pdf_path'){
+
 					echo sprintf('<td><a href="%s">File</a></td>', $value);
 					continue;
+					
 				}
 
 					echo sprintf('<td>%s</td>', $value);

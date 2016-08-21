@@ -45,23 +45,25 @@ class Form extends CI_Controller
 
 	public function upload_handler(){
 
-		$config['upload_path']   = './uploads/'; 
-		$config['allowed_types'] = 'pdf'; 
-
 		if( $_FILES['pdf']['type'] != 'application/pdf' || $_FILES['pdf']['error'] == 4 ){
 		
 			return FALSE;
 
 		} else {
+
+			$config['upload_path']   = './uploads/'; 
+			$config['allowed_types'] = 'pdf'; 
+			$this->load->library('upload', $config);
+
+			//add time stamp to file name
+			$_FILES['pdf']['name'] = time() . '_' . $_FILES['pdf']['name'];
+
+			//file upload
+			$this->upload->do_upload('pdf');
+
+			$file_data = $this->upload->data();
+			return $file_data;
 		
-		$this->load->library('upload', $config);
-		//file upload
-		$_FILES['pdf']['name'] = time() . '-' . $_FILES['pdf']['name'];
-		$this->upload->do_upload('pdf');
-
-		$file_data = $this->upload->data();
-
-		return $file_data;
 		}
 	}
 
