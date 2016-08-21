@@ -54,10 +54,10 @@ class Form_Model extends CI_Model
 	public function get_status_where($status_code){
 
 		$query = $this->db->get_where('forms', ['status' => $status_code]); 
-        if($query->num_rows() > 0){
-        	return $query->result();
-        }
-        return [];
+		if($query->num_rows() > 0){
+			return $query->result();
+		}
+		return [];
 
 	}
 
