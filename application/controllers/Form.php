@@ -36,8 +36,9 @@ class Form extends CI_Controller
 
         	} else {
 
-				$this->Form_Model->insert($file_data['full_path']);
+				$this->Form_Model->insert($file_data['orig_name']);
            		$this->load->view('submit');
+
         	}
 
         }

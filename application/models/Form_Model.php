@@ -27,7 +27,7 @@ class Form_Model extends CI_Model
 	
 	}
 
-	public function insert($path){
+	public function insert($file_name){
 		
 		$this->status 			= '0';
 		$this->first_name 		= $this->input->post('first_name');
@@ -45,7 +45,7 @@ class Form_Model extends CI_Model
 		$this->company_state	= $this->input->post('company_state');
 		$this->company_zipcode	= $this->input->post('company_zipcode');
 		$this->company_phone	= $this->input->post('company_phone');
-		$this->pdf_path			= base_url() . $path;
+		$this->pdf_path			= base_url() . 'uploads/' . $file_name;
 
 		$this->db->insert( 'forms', $this->db->escape($this) );
 	

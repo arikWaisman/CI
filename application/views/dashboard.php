@@ -1,6 +1,5 @@
 <?php include "includes/header.php"; ?>
 
-<h1>Welcome <?php echo $this->session->userdata('username') ?></h1>
 <div class="need-action-wrapper">
 	<h2 class="text-center">Need Action</h2>
 	<?php include "includes/need_action.php" ?>
