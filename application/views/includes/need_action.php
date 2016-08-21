@@ -30,7 +30,7 @@
 				}
 
 				if($key == 'pdf_path'){
-					echo sprintf('<td><a href="%s">File</a></td>', $value);
+					echo sprintf('<td><a href="%s" target="_blank">File</a></td>', $value);
 					continue;
 				}
 
