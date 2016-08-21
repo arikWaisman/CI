@@ -1,6 +1,7 @@
 var projectFileList = [
     "node_modules/jquery/dist/jquery.js",
     "node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
+    "assets/js/_main.js"
 ];
 
 
